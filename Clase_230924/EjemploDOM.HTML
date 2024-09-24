@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Ejemplo de DOM</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1 id="titulo">Título original</h1>
+        <button onclick="clickKa()">Click</button>
+
+        <script>
+            function clickKa() {
+                //Accede al elemento con id "titulo" y cambia su texto
+                document.getElementById('titulo').innerText = "Título cambiado usando el DOM";
+            }
+        </script>
+    </body>
+</html>
