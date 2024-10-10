@@ -1,22 +1,23 @@
 const display = document.getElementById('display');
-function appendToDisplay (value) {
-    document.getElementById('display').value += value;
+//Añade al display el valor ingresado por el boton correspondiente
+function appendToDisplay(value) {
+    display.value += value;
 }
-    function clearDisplay() {
-    document.getElementById('display').value ='';
-    }
-
-    function deleteLast() {
-    let displayValue = document.getElementById('display').value;
-    document.getElementById('display').value = displayValue.slice(0, -1);
-    }
-    function calculateResult() {
-         
-        try {
-    let result = eval(document.getElementById('display').value);
-    document.getElementById('display').value = result;
+//Limpia el display poniendo su valos como " " (nada)
+function clearDisplay() {
+    display.value = '';
+}
+//Elimina el ultimo valor ingresado en el display
+function deleteLast() {
+    let displayCopyValue = display.value;
+    display.value = displayCopyValue.slice(0, -1);
+}
+//Calcula el resultado de la operación ingresada
+function calculateResult() {
+    try {
+        let result = eval(display.value);
+        display.value = result;
     } catch (error) {
-    alert('Expresión inválida');
-   
+        alert('Expresión Invalida')
     }
 }

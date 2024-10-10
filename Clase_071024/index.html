@@ -1,15 +1,19 @@
+<!--Estructura basica de HTML-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--titulo-->
     <title>Calculadora</title>
+    <!--Enlaza el html al css-->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!--Crea el contenedor calculadora que contranda pues la calculadora no? su display y los botones-->
     <div class="calculator">
-        <input type="text" id="display" class="calculator-screen" value="" disabled>
-
+        <input type="text" class="calculator-screen" id="display" readonly disabled>
+        <!--Crea el contenedor de los botones de la calculadora-->
         <div class="calculator-buttons">
             <button class="button" onclick="clearDisplay()">C</button> 
             <button class="button" onclick="deleteLast()">DEL</button>
@@ -29,13 +33,13 @@
             <button class="button" onclick="appendToDisplay('1')">1</button>
             <button class="button" onclick="appendToDisplay('2')">2</button>
             <button class="button" onclick="appendToDisplay('3')">3</button>
-            <button class="button equal-button" onclick="calculatedResult()">=</button>
+            <button class="button equal-button" onclick="calculateResult()">=</button>
 
             <button class="button" onclick="appendToDisplay('0')">0</button>
             <button class="button" onclick="appendToDisplay('.')">.</button>
         </div>
     </div>
-
+    <!--Enlaza el html al script-->
     <script src="script.js"></script>
 </body>
 </html>
